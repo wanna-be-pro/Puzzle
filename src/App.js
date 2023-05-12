@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Components/shared/Footer';
+import SudokuSolver from './Components/sudoku/SudokuSolver';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-[#f4cccc] text-black w-full py-10 min-h-screen' >
+
+      <SudokuSolver />
+      <Footer/>
+
     </div>
   );
 }
