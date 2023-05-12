@@ -247,13 +247,14 @@ const SudokuSolver = () => {
             {/* <Documentation/> */}
             <p className="text-3xl text-center font-bold mb-5">Sudoku Solver</p>
             <div className='flex flex-wrap gap-5 justify-around items-start  '>
-                <ol class="list-decimal lg:w-[25%] md:w-[25%] sm:w-[80%] mx-3 py-8 static px-8 rounded  bg-green-400">
-                    <p className="text-xl">Instructions </p>
+                <ol class="list-decimal lg:w-[25%] md:w-[40%] sm:w-[80%] mx-3 py-8 static px-8 rounded  bg-green-400">
+                    <p className="text-xl underline underline-offset-2">Instructions </p>
                     <li> Input the Sudoku puzzle into the solver.</li>
+                    <li> Numbers should be 0 to 9</li>
                     <li> Click the "solve" button to generate a solution.</li>
                     <li> Verify that the solution is correct.</li>
                     <li> If the solution is correct, use it to fill in the puzzle.</li>
-                    <li> If the solution is incorrect or the solver fails to find a solution, try solving the puzzle manually or with a different solver.</li>
+                    <li> If the solution is incorrect or the solver fails to find a solution, try again or solving the puzzle manually.</li>
                 </ol>
 
                 <div id="sudoku-grid  block ">
@@ -262,16 +263,15 @@ const SudokuSolver = () => {
                             <tr className='bg-white'>{rows}</tr>
                         </tbody>
                     </table>
-                    <div className="mx-auto flex justify-around w-fit">
+                    <div className="mx-auto flex justify-around  w-fit">
                         <button className='btn mx-5 btn-small bg-[#c7d9c9] text-black mt-5 border-0 hover:bg-[#e1ddf5]' onClick={() => { reset() }}>reset</button>
                         <button className='btn mx-5 bg-[#c7d9c9] text-black mt-5 border-0 hover:bg-[#e1ddf5]' onClick={() => { getMatrixFromInputs() }}>Solve</button>
                     </div>
                     <div className="w-1/2 mx-auto mt-2 " />
                     <p className='text-rose-600  text-center p-5 '>{error}</p>
                 </div>
-                <div className="lg:w-[25%] md:w-[25%] sm:w-[80%] py-8 block px-8 rounded mx-3  bg-rose-400">
-                    <p className="text-xl">Warning </p>
-
+                <div className="lg:w-[25%] md:w-[90%] sm:w-[80%] py-8 block px-8 rounded mx-3  bg-rose-400">
+                    <p className="text-xl underline underline-offset-2">Warning </p>
                     <p className="text-lg ">
                         Automatic Sudoku solvers can be harmful because they can prevent you from fully engaging with the puzzle and developing your problem-solving skills. Additionally, using a solver may not be allowed in certain Sudoku competitions or challenges. Use with caution and only as a last resort.
                     </p>
