@@ -43,35 +43,35 @@ const Docs = () => {
                     and returns the winning player or <code className='bg-[#1114] text-black  px-3 rounded '>`null`</code> if there is no winner.
                 </li>
                 <li>
-                    <strong>makeMove:</strong> The <code>makeMove</code> function is called when a player makes a move by clicking on a cell
+                    <strong>makeMove:</strong> The <code className='bg-[#1114] text-black  px-3 rounded '>makeMove</code> function is called when a player makes a move by clicking on a cell
                     on the game board. It updates the game board's state, checks for a winner, and updates the current player. If the clicked
                     cell is already occupied or there is a winner, the function does nothing.
                 </li>
                 <li>
-                    <strong>moveMid:</strong> The <code>moveMid</code> function implements the medium-level strategy for the computer's move.
+                    <strong>moveMid:</strong> The <code className='bg-[#1114] text-black  px-3 rounded '>moveMid</code> function implements the medium-level strategy for the computer's move.
                     It analyzes the game board to find potential winning positions for both the computer and the opponent. If it finds a winning
                     position for the computer, it returns the index of that position. Otherwise, it selects a random empty cell if available.
                 </li>
                 <li>
-                    <strong>makeMoveEasy:</strong> The <code>makeMoveEasy</code> function is called when the computer is playing in easy mode.
-                    It selects a random empty cell on the game board and makes a move by calling the <code>makeMove</code> function.
+                    <strong>makeMoveEasy:</strong> The <code className='bg-[#1114] text-black  px-3 rounded '>makeMoveEasy</code> function is called when the computer is playing in easy mode.
+                    It selects a random empty cell on the game board and makes a move by calling the <code className='bg-[#1114] text-black  px-3 rounded '>makeMove</code> function.
                 </li>
                 <li>
-                    <strong>makeMoveMedium:</strong> The <code>makeMoveMedium</code> function is called when the computer is playing in medium mode.
-                    It uses the <code>moveMid</code> function to determine the optimal move for the computer based on the current game state. It
+                    <strong>makeMoveMedium:</strong> The <code className='bg-[#1114] text-black  px-3 rounded '>makeMoveMedium</code> function is called when the computer is playing in medium mode.
+                    It uses the <code className='bg-[#1114] text-black  px-3 rounded '>moveMid</code> function to determine the optimal move for the computer based on the current game state. It
                     delays the move by 200 milliseconds to provide a more natural playing experience.
                 </li>
                 <li>
-                    <strong>makeMoveHard:</strong> The <code>makeMoveHard</code> function is a placeholder for implementing the hard-level strategy.
+                    <strong>makeMoveHard:</strong> The <code className='bg-[#1114] text-black  px-3 rounded '>makeMoveHard</code> function is a placeholder for implementing the hard-level strategy.
                     Currently, it doesn't have any logic implemented and can be customized as per your requirements.
                 </li>
                 <li>
-                    <strong>resetGame:</strong> The <code>resetGame</code> function resets the game by setting the initial values for the game board,
+                    <strong>resetGame:</strong> The <code className='bg-[#1114] text-black  px-3 rounded '>resetGame</code> function resets the game by setting the initial values for the game board,
                     current player, and winner state variables.
                 </li>
                 <li>
-                    <strong>handleToggle:</strong> The <code>handleToggle</code> function is called when the game mode toggle switch is clicked.
-                    It toggles the value of the <code>isAgainstComputer</code> state variable, resetting the game to the initial state.
+                    <strong>handleToggle:</strong> The <code className='bg-[#1114] text-black  px-3 rounded '>handleToggle</code> function is called when the game mode toggle switch is clicked.
+                    It toggles the value of the <code className='bg-[#1114] text-black  px-3 rounded '>isAgainstComputer</code> state variable, resetting the game to the initial state.
                 </li>
                 <li>
                     <strong>Rendering and Styling:</strong> The Tic Tac Toe game is rendered using React components and styled using Tailwind CSS. The game board is displayed as a grid of cells, with each cell represented by a div element. The state of the game is stored using React's useState hook, allowing for dynamic updates and rendering of the game board. CSS classes from Tailwind CSS are applied to style the elements, providing a visually appealing and responsive user interface.
