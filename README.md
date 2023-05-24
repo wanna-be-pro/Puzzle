@@ -5,6 +5,7 @@ This is a simple Tic Tac Toe game built using React and styled with Tailwind CSS
 ## Demo
 
 [Play Tic Tac Toe](https://easypuzzle.netlify.app/)
+[(https://easypuzzle.netlify.app/)](https://easypuzzle.netlify.app/)
 
 ## Features
 
