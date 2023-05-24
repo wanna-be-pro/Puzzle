@@ -2,6 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    screens: {
+      'sm': '400px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '700px',
+      // => @media (min-width: 1024px) { ... }
+
+      'lg': '1000px',
+      // => @media (min-width: 1280px) { ... }
+    },
     extend: {},
   },
   plugins: [require("daisyui")],
