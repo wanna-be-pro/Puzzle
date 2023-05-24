@@ -1,14 +1,25 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './Components/shared/Footer';
 import SudokuSolver from './Components/sudoku/SudokuSolver';
+import Navbar from './Components/shared/Navbar';
+import TicTacToe from './Components/ticTacToe/TicTacToe';
+import MorseCodeConverter from './Components/MorseCodeConverter';
 
 function App() {
-  console.log(process.env.REACT_APP_APIKEY)
   return (
-    <div className='bg-[#f4cccc] text-black w-full py-10 min-h-screen' >
+    <div className='bg-[#f4cccc] flex flex-col justify-between text-black  w-full pb-10 min-h-screen' >
+      <Navbar />
+      <div className="h-full">
+        <Routes>
+          <Route path="/solver/sudoku" element={<SudokuSolver />} />
+          <Route path="/tictactoe" element={<TicTacToe />} />
+          <Route path="/convert/morsecode" element={<MorseCodeConverter />} />
+        </Routes>
+      </div>
 
-      <SudokuSolver />
-      <Footer/>
+      {/* <SudokuSolver /> */}
+      <Footer />
     </div>
   );
 }

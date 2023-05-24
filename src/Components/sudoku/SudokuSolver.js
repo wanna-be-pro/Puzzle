@@ -213,12 +213,12 @@ const SudokuSolver = () => {
                         onFocus={handleFocus}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        className={`sudoku-input border-0 rounded placeholder:text-black focus:border-0 w-10 text-gray-700 m-[0.5px] focus:ring-0 h-10 text-center  ${(Math.floor(i / 3) + Math.floor(j / 3)) % 2 === 0 ? "bg-[#ddc3e6]" : "bg-[#707160b2]"} `}
+                        className={`sudoku-input border-0 rounded placeholder:text-black focus:border-0 w-9 text-gray-700 m-[0.5px] focus:ring-0 h-9 text-center  ${(Math.floor(i / 3) + Math.floor(j / 3)) % 2 === 0 ? "bg-[#b498bdb5]" : "bg-[#8c8f6ba1]"} `}
                         ref={(el) => (inputRefs.current[index] = el)}
                     />
                 );
             })
-            newRows.push(<div key={i} className="sudoku-row ">{cols}</div>);
+            newRows.push(<div key={i} className="rounded sudoku-row ">{cols}</div>);
 
         })
         setRows(newRows);
@@ -258,9 +258,9 @@ const SudokuSolver = () => {
                 </ol>
 
                 <div id="sudoku-grid  block ">
-                    <table className='mx-auto '>
-                        <tbody>
-                            <tr className='bg-white'>{rows}</tr>
+                    <table className='mx-auto rounded '>
+                        <tbody className='rounded'>
+                            <tr className='bg-transparent rounded'>{rows}</tr>
                         </tbody>
                     </table>
                     <div className="mx-auto flex justify-around  w-fit">
