@@ -5,6 +5,7 @@ import SudokuSolver from './Components/sudoku/SudokuSolver';
 import Navbar from './Components/shared/Navbar';
 import TicTacToe from './Components/ticTacToe/TicTacToe';
 import MorseCodeConverter from './Components/MorseCodeConverter';
+import Docs from './Components/Docs';
 
 function App() {
   return (
@@ -12,9 +13,11 @@ function App() {
       <Navbar />
       <div className="h-full">
         <Routes>
+          <Route path="/" element={<SudokuSolver />} />
           <Route path="/solver/sudoku" element={<SudokuSolver />} />
           <Route path="/tictactoe" element={<TicTacToe />} />
           <Route path="/convert/morsecode" element={<MorseCodeConverter />} />
+          <Route path="/docs" element={<Docs />} />
         </Routes>
       </div>
 

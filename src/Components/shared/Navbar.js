@@ -14,16 +14,16 @@ const Navbar = () => {
                         <li><Link>Submenu 3</Link></li>
                     </ul>
                 </li> */}
-                <li>
+                {/* <li>
                     <NavLink
                         className={({ isActive, isPending }) => isPending ? "pending" : isActive ? active : ""}
                         to="/">Home
                     </NavLink>
-                </li>
+                </li> */}
                 <li><NavLink className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? active : ""
                 }
-                    to="solver/sudoku">Sudoku</NavLink></li>
+                    to="/">Sudoku</NavLink></li>
                 <li><NavLink className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? active : ""
                 }
@@ -32,7 +32,12 @@ const Navbar = () => {
                 <li><NavLink className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? active : ""
                 }
-                    to="/convert/morsecode">Morse Code Converter </NavLink>
+                    to="/convert/morsecode">Morse Code  </NavLink>
+                </li>
+                <li><NavLink className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? active : ""
+                }
+                    to="docs">Docs</NavLink>
                 </li>
             </ul >
         </div >

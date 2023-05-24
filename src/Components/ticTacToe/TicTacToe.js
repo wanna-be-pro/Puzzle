@@ -1,17 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const TicTacToe = () => {
     const [board, setBoard] = useState(Array(9).fill(''));
     const [currentPlayer, setCurrentPlayer] = useState('X');
     const [winner, setWinner] = useState(null);
     const [mode, setMode] = useState('medium');
+    const [isAgainstComputer, setIsAgainstComputer] = useState(true);
+
 
     useEffect(() => {
         if (currentPlayer === 'O' && !winner) {
             if (mode === 'easy') {
-                makeMoveEasy();
+                if (isAgainstComputer) {
+
+                    makeMoveEasy();
+                }
             } else if (mode === 'medium') {
-                makeMoveMedium();
+                if (isAgainstComputer) {
+                    makeMoveMedium();
+                }
             } else if (mode === 'hard') {
                 makeMoveHard();
             }
@@ -165,11 +172,27 @@ const TicTacToe = () => {
         setCurrentPlayer('X');
         setWinner(null);
     };
+
+    const handleToggle = () => {
+        setIsAgainstComputer(!isAgainstComputer);
+        setBoard(Array(9).fill(''));
+        setCurrentPlayer('X');
+        setWinner(null);
+    };
     return (
         <>
             <div className="flex justify-center items-center  mb-8">
                 <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
                     <h1 className="text-3xl font-bold mb-4">Tic Tac Toe</h1>
+                    <div className="flex items-center justify-between">
+                        <h1 className="ml-3 text-gray-700">Computer</h1>
+                        <input type="checkbox"
+                            checked={!isAgainstComputer}
+                            onChange={handleToggle}
+                            className="toggle toggle-info"
+                        />
+                        <h1 className="ml-3 text-gray-700">Friend</h1>
+                    </div>
                     {winner ? (
                         <div className="text-xl font-bold  mb-4">
                             {winner === 'draw' ? "It's a draw!" : `Player ${winner} wins!`}

@@ -34,7 +34,7 @@ const MorseCodeConverter = () => {
     };
 
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mb-8">
             <h1 className="text-3xl font-bold my-4">Text to Morse</h1>
             <textarea
                 className="w-96 h-32 p-2 border bg-white border-gray-300 rounded-md mb-4"
